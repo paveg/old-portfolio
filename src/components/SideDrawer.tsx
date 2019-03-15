@@ -1,18 +1,18 @@
-import "../App.css";
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import MenuIcon from "@material-ui/icons/Menu";
+import { withStyles } from "@material-ui/core/styles";
 import HomeIcon from "@material-ui/icons/Home";
 import AboutIcon from "@material-ui/icons/Info";
-import WorkIcon from "@material-ui/icons/Work";
 import MailIcon from "@material-ui/icons/Mail";
+import MenuIcon from "@material-ui/icons/Menu";
+import WorkIcon from "@material-ui/icons/Work";
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import "../App.css";
 
 const styles = () => ({
   list: {
@@ -25,7 +25,7 @@ interface State {
 }
 
 class SideDrawer extends Component<{}, State> {
-  static propTypes: any;
+  public static propTypes: any;
 
   constructor(props: {}) {
     super(props);
@@ -34,32 +34,32 @@ class SideDrawer extends Component<{}, State> {
     };
   }
 
-  render() {
+  public render() {
     // @ts-ignore
     const { classes } = this.props;
 
     const sideList = (
       <div className={classes.list}>
         <List>
-          <ListItem button key="Home" component="a" href="/">
+          <ListItem button={true} key="Home" component="a" href="/">
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
-          <ListItem button key="About" component="a" href="about">
+          <ListItem button={true} key="About" component="a" href="about">
             <ListItemIcon>
               <AboutIcon />
             </ListItemIcon>
             <ListItemText primary="About" />
           </ListItem>
-          <ListItem button key="Works" component="a" href="works">
+          <ListItem button={true} key="Works" component="a" href="works">
             <ListItemIcon>
               <WorkIcon />
             </ListItemIcon>
             <ListItemText primary="Works" />
           </ListItem>
-          <ListItem button key="Contact" component="a" href="contacts">
+          <ListItem button={true} key="Contact" component="a" href="contacts">
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
