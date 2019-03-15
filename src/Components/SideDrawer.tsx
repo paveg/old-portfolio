@@ -1,4 +1,3 @@
-//@flow
 import "../App.css";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
@@ -16,97 +15,97 @@ import WorkIcon from "@material-ui/icons/Work";
 import MailIcon from "@material-ui/icons/Mail";
 
 const styles = () => ({
-    list: {
-        width: 250
-    }
+  list: {
+    width: 250
+  }
 });
 
 interface State {
-    isOpen: boolean;
+  isOpen: boolean;
 }
 
 class SideDrawer extends Component<{}, State> {
-    static propTypes: any;
+  static propTypes: any;
 
-    constructor(props: {}) {
-        super(props);
-        this.state = {
-            isOpen: false
-        };
-    }
-
-    render() {
-        // @ts-ignore
-        const { classes } = this.props;
-
-        const sideList = (
-            <div className={classes.list}>
-                <List>
-                    <ListItem button key="Home">
-                        <ListItemIcon>
-                            <HomeIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Home" />
-                    </ListItem>
-                    <ListItem button key="About">
-                        <ListItemIcon>
-                            <AboutIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="About" />
-                    </ListItem>
-                    <ListItem button key="Works">
-                        <ListItemIcon>
-                            <WorkIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Works" />
-                    </ListItem>
-                    <ListItem button key="Contact">
-                        <ListItemIcon>
-                            <MailIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Contact" />
-                    </ListItem>
-                </List>
-            </div>
-        );
-
-        return (
-            <div>
-                <Button
-                    variant="flat"
-                    color="inherit"
-                    className={classes.button}
-                    onClick={this.toggleDrawer(true)}
-                >
-                    <MenuIcon />
-                </Button>
-                <Drawer
-                    anchor="left"
-                    open={this.state.isOpen}
-                    onClose={this.toggleDrawer(false)}
-                >
-                    <div
-                        tabIndex={0}
-                        role="button"
-                        onClick={this.toggleDrawer(false)}
-                        onKeyDown={this.toggleDrawer(false)}
-                    >
-                        {sideList}
-                    </div>
-                </Drawer>
-            </div>
-        );
-    }
-
-    private toggleDrawer = (isOpen: boolean) => () => {
-        this.setState({
-            ["isOpen"]: isOpen
-        });
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      isOpen: false
     };
+  }
+
+  render() {
+    // @ts-ignore
+    const { classes } = this.props;
+
+    const sideList = (
+      <div className={classes.list}>
+        <List>
+          <ListItem button key="Home" component="a" href="/">
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
+          <ListItem button key="About" component="a" href="about">
+            <ListItemIcon>
+              <AboutIcon />
+            </ListItemIcon>
+            <ListItemText primary="About" />
+          </ListItem>
+          <ListItem button key="Works" component="a" href="works">
+            <ListItemIcon>
+              <WorkIcon />
+            </ListItemIcon>
+            <ListItemText primary="Works" />
+          </ListItem>
+          <ListItem button key="Contact" component="a" href="contacts">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary="Contact" />
+          </ListItem>
+        </List>
+      </div>
+    );
+
+    return (
+      <div>
+        <Button
+          variant="flat"
+          color="inherit"
+          className={classes.button}
+          onClick={this.toggleDrawer(true)}
+        >
+          <MenuIcon />
+        </Button>
+        <Drawer
+          anchor="left"
+          open={this.state.isOpen}
+          onClose={this.toggleDrawer(false)}
+        >
+          <div
+            tabIndex={0}
+            role="button"
+            onClick={this.toggleDrawer(false)}
+            onKeyDown={this.toggleDrawer(false)}
+          >
+            {sideList}
+          </div>
+        </Drawer>
+      </div>
+    );
+  }
+
+  private toggleDrawer = (isOpen: boolean) => () => {
+    this.setState({
+      ["isOpen"]: isOpen
+    });
+  };
 }
 
 SideDrawer.propTypes = {
-    classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired
 } as any;
 
 export default withStyles(styles)(SideDrawer);
