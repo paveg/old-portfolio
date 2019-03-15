@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "run-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
