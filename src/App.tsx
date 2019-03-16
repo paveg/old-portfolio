@@ -9,9 +9,9 @@ import Works from "./containers/Works/Works";
 import BigAvatar from "./components/BigAvatar";
 
 const MainDiv = styled.div`
-  margin-left: 60px;
-  margin-right: 60px;
-  margin-top: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
   background: #ffffff;
   border-radius: 10px;
 `;
