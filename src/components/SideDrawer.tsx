@@ -72,7 +72,6 @@ class SideDrawer extends Component<{}, State> {
     return (
       <div>
         <Button
-          variant="flat"
           color="inherit"
           className={classes.button}
           onClick={this.toggleDrawer(true)}

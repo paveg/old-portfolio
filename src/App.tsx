@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import styled from "styled-components";
 import "./App.css";
 import Header from "./components/Header";
 import About from "./containers/About/About";
 import Contacts from "./containers/Contacts/Contacts";
-import Home from "./containers/Home/Home";
 import Works from "./containers/Works/Works";
+import BigAvatar from "./components/BigAvatar";
+
+const MainDiv = styled.div`
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 60px;
+  background: #ffffff;
+  border-radius: 10px;
+`;
 
 class App extends Component<{}> {
   constructor(props: {}) {
@@ -16,12 +25,15 @@ class App extends Component<{}> {
     return (
       <div className="App">
         <Header />
-        <Switch>
-          <Route exact={true} path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/works" component={Works} />
-          <Route path="/contacts" component={Contacts} />
-        </Switch>
+        <BigAvatar />
+        <MainDiv>
+          <Switch>
+            <Route exact={true} path="/" component={About} />
+            <Route path="/about" component={About} />
+            <Route path="/works" component={Works} />
+            <Route path="/contacts" component={Contacts} />
+          </Switch>
+        </MainDiv>
       </div>
     );
   }

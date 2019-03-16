@@ -6,8 +6,9 @@ import React from "react";
 
 const styles = {
   avatar: {
-    height: 25,
-    width: 25
+    height: 80,
+    marginTop: 40,
+    width: 80
   }
 };
 
@@ -17,7 +18,7 @@ function ImageAvatars(props: any) {
     <Grid container={true} justify="center" alignItems="center">
       <Avatar
         alt="Remy Sharp"
-        src={"/static/images/avatar/me.png"}
+        src={"/static/images/avatar/me_big.png"}
         className={classes.avatar}
       />
     </Grid>
