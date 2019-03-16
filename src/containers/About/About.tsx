@@ -4,8 +4,8 @@ class About extends Component {
   public render() {
     return (
       <div>
-        <h2>Home</h2>
-        <p>Welcome to Home</p>
+        <h2>About</h2>
+        <p>Welcome to About</p>
       </div>
     );
   }

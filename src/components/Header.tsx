@@ -10,11 +10,13 @@ import {
 } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import CodeIcon from "@material-ui/icons/Code";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import PropTypes from "prop-types";
 import React from "react";
+import GithubLogo from "../static/images/logos/github-32px.png";
+import TwitterColorLogo from "../static/images/logos/TwitterCircleColor.png";
+import TwitterLogo from "../static/images/logos/TwitterCircleWhite.png";
+import Avatar from "./Avatar";
 import SideDrawer from "./SideDrawer";
 
 const styles = (theme: Theme) =>
@@ -107,14 +109,23 @@ class PrimaryAppBar extends React.Component<Props, State> {
         onClose={this.handleMenuClose}
       >
         <MenuItem onClick={this.handleMobileMenuClose}>
-          <IconButton color="inherit" href={"https://github.com/paveg"}>
-            <CodeIcon />
+          <IconButton
+            color="inherit"
+            href={"https://github.com/paveg/portfolio"}
+          >
+            <img src={GithubLogo} width={25} height={25} />
           </IconButton>
           <p>GitHub</p>
         </MenuItem>
+        <MenuItem onClick={this.handleMobileMenuClose}>
+          <IconButton color="inherit" href={"https://twitter.com/_pavlog"}>
+            <img src={TwitterColorLogo} width={25} height={25} />
+          </IconButton>
+          <p>Twitter</p>
+        </MenuItem>
         <MenuItem onClick={this.handleProfileMenuOpen}>
           <IconButton color="inherit">
-            <AccountCircle />
+            <Avatar />
           </IconButton>
           <p>Profile</p>
         </MenuItem>
@@ -142,8 +153,14 @@ class PrimaryAppBar extends React.Component<Props, State> {
             </Typography>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              <IconButton color="inherit" href={"https://github.com/paveg"}>
-                <CodeIcon />
+              <IconButton
+                color="inherit"
+                href={"https://github.com/paveg/portfolio"}
+              >
+                <img src={GithubLogo} width={25} height={25} />
+              </IconButton>
+              <IconButton color="inherit" href={"https://twitter.com/_pavlog"}>
+                <img src={TwitterLogo} width={25} height={25} />
               </IconButton>
               <IconButton
                 aria-owns={isMenuOpen ? "material-appbar" : undefined}
@@ -151,7 +168,7 @@ class PrimaryAppBar extends React.Component<Props, State> {
                 onClick={this.handleProfileMenuOpen}
                 color="inherit"
               >
-                <AccountCircle />
+                <Avatar />
               </IconButton>
             </div>
             <div className={classes.sectionMobile}>
