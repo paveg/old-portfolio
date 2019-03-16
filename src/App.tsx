@@ -4,7 +4,6 @@ import "./App.css";
 import Header from "./components/Header";
 import About from "./containers/About/About";
 import Contacts from "./containers/Contacts/Contacts";
-import Home from "./containers/Home/Home";
 import Works from "./containers/Works/Works";
 
 class App extends Component<{}> {
@@ -17,7 +16,7 @@ class App extends Component<{}> {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact={true} path="/" component={Home} />
+          <Route exact={true} path="/" component={About} />
           <Route path="/about" component={About} />
           <Route path="/works" component={Works} />
           <Route path="/contacts" component={Contacts} />

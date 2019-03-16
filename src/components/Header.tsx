@@ -13,9 +13,6 @@ import Typography from "@material-ui/core/Typography";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import PropTypes from "prop-types";
 import React from "react";
-import GithubLogo from "../static/images/logos/github-32px.png";
-import TwitterColorLogo from "../static/images/logos/TwitterCircleColor.png";
-import TwitterLogo from "../static/images/logos/TwitterCircleWhite.png";
 import Avatar from "./Avatar";
 import SideDrawer from "./SideDrawer";
 
@@ -113,13 +110,21 @@ class PrimaryAppBar extends React.Component<Props, State> {
             color="inherit"
             href={"https://github.com/paveg/portfolio"}
           >
-            <img src={GithubLogo} width={25} height={25} />
+            <img
+              src={"/static/images/logos/github-32px.png"}
+              width={25}
+              height={25}
+            />
           </IconButton>
           <p>GitHub</p>
         </MenuItem>
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton color="inherit" href={"https://twitter.com/_pavlog"}>
-            <img src={TwitterColorLogo} width={25} height={25} />
+            <img
+              src={"/static/images/logos/TwitterCircleColor.png"}
+              width={25}
+              height={25}
+            />
           </IconButton>
           <p>Twitter</p>
         </MenuItem>
@@ -157,10 +162,18 @@ class PrimaryAppBar extends React.Component<Props, State> {
                 color="inherit"
                 href={"https://github.com/paveg/portfolio"}
               >
-                <img src={GithubLogo} width={25} height={25} />
+                <img
+                  src={"/static/images/logos/github-32px.png"}
+                  width={25}
+                  height={25}
+                />
               </IconButton>
               <IconButton color="inherit" href={"https://twitter.com/_pavlog"}>
-                <img src={TwitterLogo} width={25} height={25} />
+                <img
+                  src={"/static/images/logos/TwitterCircleWhite.png"}
+                  width={25}
+                  height={25}
+                />
               </IconButton>
               <IconButton
                 aria-owns={isMenuOpen ? "material-appbar" : undefined}

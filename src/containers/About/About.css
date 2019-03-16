@@ -1,0 +1,13 @@
+h2 {
+  font-size: 40px;
+  background: linear-gradient(transparent 60%, #fae438 60%);
+}
+
+ul.profile-ul {
+    list-style: none;
+}
+
+div.about-box {
+  text-align: left;
+  margin-left: 20px;
+}
