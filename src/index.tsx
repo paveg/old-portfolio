@@ -5,15 +5,18 @@ import { Provider } from "react-redux";
 import App from "./App";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
+import GlobalBody from "./theme/GlobalStyle";
 
 import configureStore, { history } from "./redux/modules/configureStore";
 
-const store = configureStore("");
+const store = configureStore(history);
 
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <App />
+      <GlobalBody>
+        <App />
+      </GlobalBody>
     </ConnectedRouter>
   </Provider>,
   document.getElementById("root")

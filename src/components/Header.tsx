@@ -154,7 +154,7 @@ class PrimaryAppBar extends React.Component<Props, State> {
               color="inherit"
               noWrap={true}
             >
-              Portofolio
+              Portfolio
             </Typography>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
