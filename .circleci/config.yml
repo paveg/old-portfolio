@@ -19,7 +19,7 @@ commands:
           key: v1-dependencies-{{ checksum "package.json" }}
 
 jobs:
-  deploy-job:
+  now:
     <<: *defaults
     steps:
       - prepare
@@ -35,8 +35,7 @@ jobs:
 workflows:
   deploy:
     jobs:
-      - review-approve:
-          type: approval
-      - deploy-job:
-          requires:
-            - review-approve
+      - now:
+          filters:
+            branches:
+              only: master
