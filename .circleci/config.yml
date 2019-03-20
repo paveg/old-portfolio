@@ -24,9 +24,7 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths:
-            - now.json
-            - package.json
-            - build/*
+            - *
 
   deploy:
     <<: *defaults
