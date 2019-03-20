@@ -1,9 +1,12 @@
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:11.12
+
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/node:11.9
-    working_directory: ~/repo
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
@@ -15,4 +18,32 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: ~/repo
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+            at: ~/repo
       - run: npm test
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: install now
+          command: sudo npm install -g --unsafe-perm now
+      - run:
+          name: deploy
+          command: |
+            pwd
+workflows:
+  test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy
