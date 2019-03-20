@@ -15,31 +15,47 @@ This repository is my portfolio site.
 - [Redux](https://redux.js.org/)
 - [Material-UI](https://material-ui.com/)
 
-### Directory constitution
+### Directory Structure
 
 ```
-❯ tree -d -L 2
+❯ tree -L 2 --dirsfirst -I 'node_modules|build|__tests__'
 .
-├── __tests__
-├── node_modules
-│   └── ...
 ├── public
-└── src
-    ├── components
-    ├── containers
-    │   ├── About
-    │   ├── Contacts
-    │   ├── Home
-    │   └── Works
-    └── redux
-    └── modules
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+├── src
+│   ├── components
+│   ├── containers
+│   ├── redux
+│   ├── static
+│   ├── theme
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── index.tsx
+│   ├── logo.svg
+│   ├── react-app-env.d.ts
+│   └── serviceWorker.ts
+├── Dockerfile
+├── LICENSE
+├── Makefile
+├── README.md
+├── nginx.conf
+├── now.json
+├── package-lock.json
+├── package.json
+├── tsconfig.json
+└── tslint.json
+
+7 directories, 20 files
 ```
 
 ## Commands
 
 - `npm run start`
 
-    Run local server. 
+    Run local server. Please, access to http://localhosthost:3000 .
 
 - `npm run test`
 
@@ -48,6 +64,24 @@ This repository is my portfolio site.
 - `npm tslint`
 
     Run tslint and prettier construction check.
+
+- `make docker.build`
+
+    Build on docker.
+    
+- `make docker.run`
+
+    Run docker. Please, access to http://localhosthost:8080 . 
+
+## Deployment
+
+### Staging
+
+- Start to deploy staging when you create PullRequest.
+
+### Master
+
+- Run auto deployment when you merge into master.
 
 ---
 
