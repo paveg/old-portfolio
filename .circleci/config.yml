@@ -19,23 +19,15 @@ commands:
           key: v1-dependencies-{{ checksum "package.json" }}
 
 jobs:
-  now:
+  test:
     <<: *defaults
     steps:
       - prepare
       - run:
-          name: install now
-          command: sudo npm install -g --unsafe-perm now
-      - run:
-          name: deploy
-          command: |
-            now -t ${ZEIT_TOKEN}
-            now alias pavlog -t ${ZEIT_TOKEN}
+          name: npm run test
+          command: npm run test
 
 workflows:
   deploy:
     jobs:
-      - now:
-          filters:
-            branches:
-              only: master
+      - test
