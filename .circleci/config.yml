@@ -40,6 +40,7 @@ jobs:
           command: |
             pwd
 workflows:
+  version: 2
   test:
     jobs:
       - build
