@@ -13,6 +13,9 @@ import Typography from "@material-ui/core/Typography";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import PropTypes from "prop-types";
 import React from "react";
+import GithubImage from "../static/images/logos/github-32px.png";
+import TwitterColorImage from "../static/images/logos/TwitterCircleColor.png";
+import TwitterWhiteImage from "../static/images/logos/TwitterCircleWhite.png";
 import Avatar from "./Avatar";
 import SideDrawer from "./SideDrawer";
 
@@ -110,21 +113,13 @@ class PrimaryAppBar extends React.Component<Props, State> {
             color="inherit"
             href={"https://github.com/paveg/portfolio"}
           >
-            <img
-              src={"/static/images/logos/github-32px.png"}
-              width={25}
-              height={25}
-            />
+            <img src={GithubImage} width={25} height={25} />
           </IconButton>
           <p>GitHub</p>
         </MenuItem>
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton color="inherit" href={"https://twitter.com/_pavlog"}>
-            <img
-              src={"/static/images/logos/TwitterCircleColor.png"}
-              width={25}
-              height={25}
-            />
+            <img src={TwitterColorImage} width={25} height={25} />
           </IconButton>
           <p>Twitter</p>
         </MenuItem>
@@ -162,18 +157,10 @@ class PrimaryAppBar extends React.Component<Props, State> {
                 color="inherit"
                 href={"https://github.com/paveg/portfolio"}
               >
-                <img
-                  src={"/static/images/logos/github-32px.png"}
-                  width={25}
-                  height={25}
-                />
+                <img src={GithubImage} width={25} height={25} />
               </IconButton>
               <IconButton color="inherit" href={"https://twitter.com/_pavlog"}>
-                <img
-                  src={"/static/images/logos/TwitterCircleWhite.png"}
-                  width={25}
-                  height={25}
-                />
+                <img src={TwitterWhiteImage} width={25} height={25} />
               </IconButton>
               <IconButton
                 aria-owns={isMenuOpen ? "material-appbar" : undefined}
