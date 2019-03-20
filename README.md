@@ -55,7 +55,7 @@ This repository is my portfolio site.
 
 - `npm run start`
 
-    Run local server. Please, access to http://localhosthost:3000 .
+    Run local server. Please, access to http://localhost:3000/ .
 
 - `npm run test`
 
@@ -71,7 +71,7 @@ This repository is my portfolio site.
     
 - `make docker.run`
 
-    Run docker. Please, access to http://localhosthost:8080 . 
+    Run docker. Please, access to http://localhost:8080/ .
 
 ## Deployment
 
