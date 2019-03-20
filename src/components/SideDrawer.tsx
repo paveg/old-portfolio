@@ -6,7 +6,6 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { withStyles } from "@material-ui/core/styles";
 import HomeIcon from "@material-ui/icons/Home";
-import AboutIcon from "@material-ui/icons/Info";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import WorkIcon from "@material-ui/icons/Work";
@@ -41,15 +40,9 @@ class SideDrawer extends Component<{}, State> {
     const sideList = (
       <div className={classes.list}>
         <List>
-          <ListItem button={true} key="Home" component="a" href="/">
+          <ListItem button={true} key="About" component="a" href="/">
             <ListItemIcon>
               <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItem>
-          <ListItem button={true} key="About" component="a" href="about">
-            <ListItemIcon>
-              <AboutIcon />
             </ListItemIcon>
             <ListItemText primary="About" />
           </ListItem>
