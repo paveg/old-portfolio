@@ -22,7 +22,7 @@ class About extends Component {
       <div>
         <h3>Profile</h3>
         <NoneUl>
-          <li>Name: Ryota Ikezawa - pav</li>
+          <li>Name: Ryota Ikezawa</li>
           <li>Age: {this.currentAge()}</li>
           <li>City: Tokyo / Japan</li>
           <li>Job: Software Development Engineer</li>
