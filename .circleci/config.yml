@@ -18,14 +18,15 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: npm build
+          command: npm run build
       - persist_to_workspace:
           root: ~/repo
-  test:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-            at: ~/repo
-      - run: npm test
+          paths:
+            - now.json
+            - package.json
+            - build/*
 
   deploy:
     <<: *defaults
@@ -38,13 +39,18 @@ jobs:
       - run:
           name: deploy
           command: |
-            pwd
+            now -t ${ZEIT_TOKEN}
+            now alias pavlog -t ${ZEIT_TOKEN}
+
 workflows:
   version: 2
   test:
     jobs:
       - build
-      - test:
+      - review-approve:
+          type: approval
           requires:
             - build
-      - deploy
+      - deploy:
+          requires:
+            - review-approve
