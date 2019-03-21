@@ -31,7 +31,7 @@ jobs:
           name: upload codecov
           when: on_success
           command: |
-            npm run coverage -- -t ${CODECOV_TOKEN}
+            npm run codecov -- -t ${CODECOV_TOKEN}
 
 workflows:
   test:
