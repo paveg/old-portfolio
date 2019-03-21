@@ -2,7 +2,7 @@ version: 2.1
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:11.12
+    - image: circleci/node:10.15
 
 commands:
   prepare:
@@ -19,15 +19,21 @@ commands:
           key: v1-dependencies-{{ checksum "package.json" }}
 
 jobs:
-  test:
+  jest:
     <<: *defaults
     steps:
       - prepare
       - run:
           name: npm run test
-          command: npm run test
+          command: |
+            npm run test-ci
+      - run:
+          name: upload codecov
+          when: on_success
+          command: |
+            npm run codecov -- -t ${CODECOV_TOKEN}
 
 workflows:
-  deploy:
+  test:
     jobs:
-      - test
+      - jest

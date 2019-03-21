@@ -18,7 +18,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --watchAll --coverage",
+    "test-ci": "jest --forceExit --coverage --coverageReporters=\"text-lcov\" > coverage.lcov",
+    "codecov": "codecov",
     "eject": "react-scripts eject",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "now-build": "react-scripts build"
@@ -33,17 +35,53 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^23.3.14",
     "@types/node": "^11.11.4",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.3",
     "@types/react-redux": "^7.0.5",
     "@types/react-router-dom": "^4.3.1",
     "@types/styled-components": "^4.1.12",
+    "codecov": "^3.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "jest": "^23.6.0",
     "prettier": "^1.16.4",
     "react-testing-library": "^6.0.1",
+    "ts-jest": "^23.10.5",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^3.6.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.tsx",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.tsx"
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json",
+        "babelConfig": true
+      }
+    },
+    "testMatch": [
+      "**/__tests__/**/*\\.(spec|test)\\.(ts|tsx|js)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/"
+    ],
+    "coverageDirectory": "./coverage/"
   }
 }
