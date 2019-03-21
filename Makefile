@@ -2,7 +2,7 @@
 
 APP_NAME := portfolio
 VERSION_TAG ?= latest
-BUILD_NODE_VERSION := 11.12.0
+BUILD_NODE_VERSION := 10.15.3
 ifeq ($(shell ls -a | grep .node-version), .node-version)
 	BUILD_NODE_VERSION := $(shell cat .node-version)
 endif
