@@ -33,7 +33,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/jest": "^24.0.11",
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^23.3.14",
     "@types/node": "^11.11.4",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.3",
@@ -42,10 +44,10 @@
     "@types/styled-components": "^4.1.12",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
-    "jest": "^24.5.0",
+    "jest": "^23.6.0",
     "prettier": "^1.16.4",
     "react-testing-library": "^6.0.1",
-    "ts-jest": "^24.0.0",
+    "ts-jest": "^23.10.5",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
@@ -57,12 +59,17 @@
       "tsx",
       "js"
     ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.tsx",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.tsx"
+    },
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
     },
     "globals": {
       "ts-jest": {
-        "tsConfigFile": "tsconfig.json"
+        "tsConfig": "tsconfig.json",
+        "babelConfig": true
       }
     },
     "testMatch": [
