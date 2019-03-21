@@ -18,7 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --coverage",
+    "test": "jest --watchAll --coverage",
+    "test-ci": "jest --forceExit --coverage --coverageReporters=\"text-lcov\" > coverage.lcov",
     "eject": "react-scripts eject",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "now-build": "react-scripts build"
@@ -74,6 +75,10 @@
     },
     "testMatch": [
       "**/__tests__/**/*\\.(spec|test)\\.(ts|tsx|js)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/"
     ]
   }
 }
