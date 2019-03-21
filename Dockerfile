@@ -1,4 +1,4 @@
-ARG NODE_VERSION=11.12.0
+ARG NODE_VERSION=10.15.3
 FROM node:${NODE_VERSION}-alpine as build
 ENV NODE_ENV production
 WORKDIR /usr/src/app

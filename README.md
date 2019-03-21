@@ -6,7 +6,7 @@ This repository is my portfolio site.
 ## Requires
 
 - npm: 6.5.0
-- node: v11.12.0
+- node: v10.15.3
 
 ## Technical constitution
 
