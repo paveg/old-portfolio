@@ -27,6 +27,11 @@ jobs:
           name: npm run test
           command: |
             npm run test-ci
+      - run:
+          name: upload codecov
+          when: on_success
+          command: |
+            npm run coverage -- -t ${CODECOV_TOKEN}
 
 workflows:
   test:

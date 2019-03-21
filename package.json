@@ -20,6 +20,7 @@
     "build": "react-scripts build",
     "test": "jest --watchAll --coverage",
     "test-ci": "jest --forceExit --coverage --coverageReporters=\"text-lcov\" > coverage.lcov",
+    "codecov": "codecov",
     "eject": "react-scripts eject",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "now-build": "react-scripts build"
@@ -43,6 +44,7 @@
     "@types/react-redux": "^7.0.5",
     "@types/react-router-dom": "^4.3.1",
     "@types/styled-components": "^4.1.12",
+    "codecov": "^3.2.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "jest": "^23.6.0",
@@ -79,6 +81,7 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/tests/"
-    ]
+    ],
+    "coverageDirectory": "./coverage/"
   }
 }
