@@ -11,7 +11,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import WorkIcon from "@material-ui/icons/Work";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import "../App.css";
 
 const styles = () => ({
   list: {

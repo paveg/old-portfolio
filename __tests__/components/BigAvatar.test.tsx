@@ -2,12 +2,18 @@ import { configure } from "enzyme";
 import { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import React from "react";
-import App from "./../src/App";
+import BigAvatar from "./../../src/components/BigAvatar";
 
 configure({ adapter: new Adapter() });
 
-describe("App", () => {
+describe("BigAvatar", () => {
+  const avatarImage = shallow(<BigAvatar />);
+
   it("renders without crashing", () => {
-    shallow(<App />);
+    avatarImage;
+  });
+
+  it("is a element.", () => {
+    expect(avatarImage.length).toBe(1);
   });
 });
