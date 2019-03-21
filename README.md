@@ -1,6 +1,14 @@
 Portfolio
 =========
 
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
+[![CircleCI](https://circleci.com/gh/paveg/portfolio.svg?style=svg)][circleci]
+[![codecov](https://codecov.io/gh/paveg/portfolio/branch/master/graph/badge.svg)][codecov]
+
+[license]: https://github.com/paveg/portfolio/blob/master/LICENSE
+[circleci]: https://circleci.com/gh/paveg/portfolio
+[codecov]: https://codecov.io/gh/paveg/portfolio
+
 This repository is my portfolio site.
 
 ## Requires
@@ -18,7 +26,7 @@ This repository is my portfolio site.
 ### Directory Structure
 
 ```
-❯ tree -L 2 --dirsfirst -I 'node_modules|build|__tests__'
+❯ tree -L 2 --dirsfirst -I 'node_modules|build|__tests__|__mocks__|coverage'
 .
 ├── public
 │   ├── favicon.ico
@@ -47,8 +55,6 @@ This repository is my portfolio site.
 ├── package.json
 ├── tsconfig.json
 └── tslint.json
-
-7 directories, 20 files
 ```
 
 ## Commands
