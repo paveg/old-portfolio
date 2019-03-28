@@ -14,6 +14,10 @@ const MainDiv = styled.div`
   margin-top: 30px;
   background: #ffffff;
   border-radius: 10px;
+  div {
+    text-align: left;
+    margin: 20px;
+  }
 `;
 
 class App extends Component<{}> {

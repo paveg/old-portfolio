@@ -10,8 +10,9 @@ describe("Skill", () => {
     shallow(<Skill />);
   });
 
-  it("equals h2 text", () => {
+  it("has elements", () => {
     const h2Tag = shallow(<Skill />).find("h2");
+
     expect(h2Tag.text()).toEqual("Skill");
   });
 });

@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2017",
+    "target": "es2018",
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "allowJs": true,
     "checkJs": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "noEmit": true,
     "strict": true,
     "esModuleInterop": true,
@@ -15,7 +15,7 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "es2017"
+      "es2018"
     ],
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
