@@ -45,13 +45,13 @@ class SideDrawer extends Component<{}, State> {
             </ListItemIcon>
             <ListItemText primary="About" />
           </ListItem>
-          <ListItem button={true} key="Works" component="a" href="works">
+          <ListItem button={true} key="Skill" component="a" href="skill">
             <ListItemIcon>
               <WorkIcon />
             </ListItemIcon>
-            <ListItemText primary="Works" />
+            <ListItemText primary="Skill" />
           </ListItem>
-          <ListItem button={true} key="Contact" component="a" href="contacts">
+          <ListItem button={true} key="Contact" component="a" href="contact">
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>

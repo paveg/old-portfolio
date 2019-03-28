@@ -5,8 +5,8 @@ import "./App.css";
 import BigAvatar from "./components/BigAvatar";
 import Header from "./components/Header";
 import About from "./containers/About/About";
-import Contacts from "./containers/Contacts/Contacts";
-import Works from "./containers/Works/Works";
+import Contact from "./containers/Contact/Contact";
+import Skill from "./containers/Skill/Skill";
 
 const MainDiv = styled.div`
   margin-left: 20px;
@@ -30,8 +30,8 @@ class App extends Component<{}> {
           <Switch>
             <Route exact={true} path="/" component={About} />
             <Route path="/about" component={About} />
-            <Route path="/works" component={Works} />
-            <Route path="/contacts" component={Contacts} />
+            <Route path="/skill" component={Skill} />
+            <Route path="/contact" component={Contact} />
           </Switch>
         </MainDiv>
       </div>
