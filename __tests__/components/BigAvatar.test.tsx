@@ -7,11 +7,10 @@ import BigAvatar from "./../../src/components/BigAvatar";
 configure({ adapter: new Adapter() });
 
 describe("BigAvatar", () => {
-  const avatarImage = shallow(<BigAvatar />);
-
   it("renders without crashing", () => {
-    avatarImage;
+    shallow(<BigAvatar />);
   });
+  const avatarImage = shallow(<BigAvatar />);
 
   it("is a element.", () => {
     expect(avatarImage.length).toBe(1);
