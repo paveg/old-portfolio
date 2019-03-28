@@ -9,4 +9,9 @@ describe("Contact", () => {
   it("renders without crashing", () => {
     shallow(<Contact />);
   });
+
+  it("equals h2 text", () => {
+    const h2Tag = shallow(<Contact />).find("h2");
+    expect(h2Tag.text()).toEqual("Contact");
+  });
 });
