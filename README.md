@@ -49,6 +49,7 @@ This repository is my portfolio site.
 ├── LICENSE
 ├── Makefile
 ├── README.md
+├── coverage.lcov
 ├── nginx.conf
 ├── now.json
 ├── package-lock.json
