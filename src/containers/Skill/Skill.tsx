@@ -20,41 +20,80 @@ const StyledImage = styled.img`
   margin-right: 4px;
 `;
 
+const CenterTable = styled.table`
+  text-align: center;
+`;
+
 class Skill extends Component {
   public render() {
     const partSkill = (
       <div>
         <h3>
           <LapTopIcon />
-          {" " + "Programming Language and Framework"}
+          {" " + "Language and Framework"}
         </h3>
-        <NoneUl>
-          <li>
-            <StyledImage src={RubyIcon} />
-            Ruby
-          </li>
-          <li>
-            <StyledImage src={RailsIcon} />
-            Ruby On Rails
-          </li>
-          <li>
-            <StyledImage src={GolangIcon} />
-            golang
-          </li>
-          <li>
-            <StyledImage src={JsIcon} />
-            JavaScript
-          </li>
-          <li>
-            <StyledImage src={TsIcon} />
-            TypeScript
-          </li>
-          <li>
-            <StyledImage src={ReactIcon} />
-            React.js
-          </li>
-          <li>ShellScript</li>
-        </NoneUl>
+        <CenterTable>
+          <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Experience</th>
+            <th>Memo</th>
+          </tr>
+          <tr>
+            <td>
+              <StyledImage src={RubyIcon} />
+            </td>
+            <td>Ruby</td>
+            <td>4 years</td>
+            <td> - </td>
+          </tr>
+          <tr>
+            <td>
+              <StyledImage src={RailsIcon} />
+            </td>
+            <td>Rails</td>
+            <td>4 years</td>
+            <td> - </td>
+          </tr>
+          <tr>
+            <td>
+              <StyledImage src={GolangIcon} />
+            </td>
+            <td>golang</td>
+            <td>half year</td>
+            <td> - </td>
+          </tr>
+          <tr>
+            <td>
+              <StyledImage src={JsIcon} />
+            </td>
+            <td>JavaScript</td>
+            <td>2 years</td>
+            <td> - </td>
+          </tr>
+          <tr>
+            <td>
+              <StyledImage src={TsIcon} />
+            </td>
+            <td>TypeScript</td>
+            <td>3 months</td>
+            <td> - </td>
+          </tr>
+          <tr>
+            <td>
+              <StyledImage src={ReactIcon} />
+            </td>
+            <td>React.js</td>
+            <td>half year</td>
+            <td> - </td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>ShellScript</td>
+            <td>4 years</td>
+            <td> - </td>
+          </tr>
+        </CenterTable>
       </div>
     );
     return (
