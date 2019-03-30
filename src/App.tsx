@@ -9,14 +9,14 @@ import Contact from "./containers/Contact/Contact";
 import Skill from "./containers/Skill/Skill";
 
 const MainDiv = styled.div`
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 30px;
   background: #ffffff;
   border-radius: 10px;
   div {
     text-align: left;
-    margin: 20px;
+    margin: 10px;
   }
 `;
 
