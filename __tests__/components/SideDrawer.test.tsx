@@ -7,9 +7,7 @@ import SideDrawer from "./../../src/components/SideDrawer";
 configure({ adapter: new Adapter() });
 
 describe("SideDrawer", () => {
-  const sideDrawer = shallow(<SideDrawer />);
-
   it("renders without crashing", () => {
-    sideDrawer;
+    shallow(<SideDrawer />);
   });
 });

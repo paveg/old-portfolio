@@ -108,7 +108,7 @@ class PrimaryAppBar extends React.Component<Props, State> {
         open={isMobileMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMobileMenuClose}>
+        <MenuItem onClick={this.handleMobileMenuClose} button={true}>
           <IconButton
             color="inherit"
             href={"https://github.com/paveg/portfolio"}
@@ -117,7 +117,7 @@ class PrimaryAppBar extends React.Component<Props, State> {
           </IconButton>
           <p>GitHub</p>
         </MenuItem>
-        <MenuItem onClick={this.handleMobileMenuClose}>
+        <MenuItem onClick={this.handleMobileMenuClose} button={true}>
           <IconButton color="inherit" href={"https://twitter.com/_pavlog"}>
             <img src={TwitterColorImage} width={25} height={25} />
           </IconButton>
@@ -145,7 +145,7 @@ class PrimaryAppBar extends React.Component<Props, State> {
             </IconButton>
             <Typography
               className={classes.title}
-              variant="h6"
+              variant={"h5"}
               color="inherit"
               noWrap={true}
             >

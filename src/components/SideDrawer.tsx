@@ -5,6 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { withStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 import HomeIcon from "@material-ui/icons/Home";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -43,19 +44,25 @@ class SideDrawer extends Component<{}, State> {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="About" />
+            <ListItemText
+              primary={<Typography variant="h5">About</Typography>}
+            />
           </ListItem>
-          <ListItem button={true} key="Works" component="a" href="works">
+          <ListItem button={true} key="Skill" component="a" href="skill">
             <ListItemIcon>
               <WorkIcon />
             </ListItemIcon>
-            <ListItemText primary="Works" />
+            <ListItemText
+              primary={<Typography variant="h5">Skill</Typography>}
+            />
           </ListItem>
-          <ListItem button={true} key="Contact" component="a" href="contacts">
+          <ListItem button={true} key="Contact" component="a" href="contact">
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
-            <ListItemText primary="Contact" />
+            <ListItemText
+              primary={<Typography variant="h5">Contact</Typography>}
+            />
           </ListItem>
         </List>
       </div>

@@ -7,11 +7,10 @@ import Avatar from "./../../src/components/Avatar";
 configure({ adapter: new Adapter() });
 
 describe("Avatar", () => {
-  const avatarImage = shallow(<Avatar />);
-
   it("renders without crashing", () => {
-    avatarImage;
+    shallow(<Avatar />);
   });
+  const avatarImage = shallow(<Avatar />);
 
   it("is a element.", () => {
     expect(avatarImage.length).toBe(1);

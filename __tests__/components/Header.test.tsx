@@ -7,9 +7,7 @@ import Header from "./../../src/components/Header";
 configure({ adapter: new Adapter() });
 
 describe("Header", () => {
-  const header = shallow(<Header />);
-
   it("renders without crashing", () => {
-    header;
+    shallow(<Header />);
   });
 });

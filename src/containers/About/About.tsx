@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const AboutDiv = styled.div`
-  text-align: left;
-  margin-left: 20px;
-`;
-
 const NoneUl = styled.ul`
   list-style: none;
 `;
@@ -54,12 +49,12 @@ class About extends Component {
     );
 
     return (
-      <AboutDiv>
+      <div>
         <h2>About Me</h2>
         <h3>Biography</h3>
         {englishBio}
         {profile}
-      </AboutDiv>
+      </div>
     );
   }
 
