@@ -1,5 +1,17 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "labels": ["renovate"],
+  "prConcurrentLimit": 20,
+  "docker": false,
+  "separateMultipleMajor": true,
+  "packageRules": [
+    {
+      "packageNames": ["connected-react-router"],
+      "major": false
+    },
+    {
+      "packageNames": ["react", "react-dom", "react-test-renderer"],
+      "allowedVersions": "< 16.0.0"
+    }
   ]
 }
