@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", "schedule:earlyMondays"],
   "labels": ["renovate"],
   "prConcurrentLimit": 20,
   "docker": false,
@@ -13,5 +13,20 @@
       "packageNames": ["react", "react-dom", "react-test-renderer"],
       "allowedVersions": "< 16.0.0"
     }
-  ]
+  ],
+  "major": {
+    "enabled": false
+  },
+  "minor": {
+    "automerge": true
+  },
+  "patch": {
+    "automerge": true
+  },
+  "pin": {
+    "automerge": true
+  },
+  "lockFileMaintenance": {
+    "automerge": true
+  }
 }
