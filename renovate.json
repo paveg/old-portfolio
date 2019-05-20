@@ -1,9 +1,10 @@
 {
-  "extends": ["config:base", "schedule:earlyMondays"],
+  "extends": ["config:base"],
   "labels": ["renovate"],
   "prConcurrentLimit": 20,
   "docker": false,
   "separateMultipleMajor": true,
+  "schedule": "every weekday",
   "packageRules": [
     {
       "packageNames": ["connected-react-router"],
@@ -18,10 +19,12 @@
     "enabled": false
   },
   "minor": {
-    "automerge": true
+    "automerge": true,
+    "groupName": "all minor dependencies"
   },
   "patch": {
-    "automerge": true
+    "automerge": true,
+    "groupName": "all patch dependencies"
   },
   "pin": {
     "automerge": true
