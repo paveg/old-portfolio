@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "labels": ["renovate"],
+  "labels": ["renovate,"Base"],
   "assignees": ["paveg"],
   "prConcurrentLimit": 20,
   "docker": false,
@@ -21,11 +21,13 @@
   },
   "minor": {
     "automerge": true,
-    "groupName": "all minor dependencies"
+    "groupName": "all minor dependencies",
+    "labels": ["Practical", "minor"]
   },
   "patch": {
     "automerge": true,
-    "groupName": "all patch dependencies"
+    "groupName": "all patch dependencies",
+    "labels": ["Practical", "patch"]
   },
   "pin": {
     "automerge": true
