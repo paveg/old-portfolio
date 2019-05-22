@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "labels": ["renovate,"Base"],
+  "labels": ["renovate","Base"],
   "assignees": ["paveg"],
   "prConcurrentLimit": 20,
   "docker": false,
