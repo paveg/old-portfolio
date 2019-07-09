@@ -35,7 +35,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/enzyme": "3.10.1",
+    "@types/enzyme": "3.10.2",
     "@types/enzyme-adapter-react-16": "1.0.5",
     "@types/jest": "23.3.14",
     "@types/node": "11.13.17",
