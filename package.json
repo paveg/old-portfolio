@@ -45,7 +45,7 @@
     "@types/react-router-dom": "4.3.4",
     "@types/styled-components": "4.1.18",
     "awesome-typescript-loader": "5.2.1",
-    "codecov": "3.5.0",
+    "codecov": "3.8.3",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
     "jest": "23.6.0",
